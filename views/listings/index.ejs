@@ -27,6 +27,66 @@
         border-radius: 24px;
         margin-left: 140px;
     }
+    @media (max-width:1202px){
+        .filters{
+            width: 928px;
+        }
+        .filter{
+            font-size: 10px;
+        }
+    }
+    @media (max-width:995px){
+        .form-switch{
+            width: 242px;
+            height: 43px;
+            font-size: 15px;
+        }
+            .filters {
+                font-size: 9px;
+                width: 883px;
+                position: relative;
+                right: 130px;
+            }
+        
+    }
+    @media (max-width:982px){
+        .form-switch{
+            margin-left: 2px !important;
+            width: 170px;
+            font-size: 15px;
+        }
+        .filters{
+            width: 789px;
+            left: -74px;
+        }
+    }
+    @media (max-width:770px){
+        .form-switch{
+            font-size: 15px;
+            width: 332px;
+            height: 35px;
+        }
+        .filters{
+            width: 332px;
+            left: 0;
+        }
+        .filter{
+            display: none;
+        }
+    }
+    @media (max-width:531px){
+        .filters {
+            left: 0;
+         }
+        .filter{
+            display: none;
+        }
+        .form-switch{
+            font-size: 15px;
+        }
+    }
+
+        
 </style>
 <div class="filters">
     <div class="filter">
@@ -65,7 +125,7 @@
         <div><i class="fa-solid fa-snowflake"></i></div>
         <p class="icon-text">Arctic</p>
     </div>
-
+    
     <div>
         <div id="check-toogle" class="form-check-reverse form-switch">
         <input  class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">

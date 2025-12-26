@@ -43,7 +43,7 @@ module.exports.createListing=async (req,res,next)=>{
         newlisting.image={url,filename};
         newlisting.coordinate=[latitude,longitude];
         let data=await newlisting.save();
-        console.log(data);
+        // console.log(data);
         req.flash("success","new listing is created");
         res.redirect("/listing");
 };
@@ -77,6 +77,13 @@ module.exports.updateListing=async (req,res)=>{
     listing.image={url,filename};
     await listing.save();
     }
+    const listingCord=req.body.listing;
+    const coordinates = await geocoding.encode(listingCord.location,listingCord.country);
+    let latitude=coordinates[0].latitude;
+    let longitude=coordinates[0].longitude;
+    listing.coordinate=[latitude,longitude];
+    await listing.save();
+
     req.flash("success","Listing is updated");
     res.redirect(`/listing/${id}`); 
 }
