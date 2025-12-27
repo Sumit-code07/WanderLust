@@ -69,8 +69,8 @@
                 <div class="card mb-3">
                     <div class="card-body ms-2" style="height: 165px;">
                         <h5 class="card-title"><%=review.author.username%></h5>
-                        <p class="starability-result card-text" data-rating="<%=review.rating%>"></p>
-                        <p class="card-text"><%=review.comment%></p>
+                        <p class="starability-result card-text" style="margin: 0;" data-rating="<%=review.rating%>"></p>
+                        <p class="card-text review-scroll"><%=review.comment%></p>
                         <%if(currUser&&currUser._id.equals(review.author._id)){%>
                         <form method="POST" action="/listing/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE">
                             <button class="btn btn-sm btn-dark mb-3">Delete</button>
